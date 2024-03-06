@@ -1,0 +1,12 @@
+name: logbooks_migrate
+type: module
+description: Migrate Logbooks Content and Users
+core_version_requirement: ^10
+package: Elog
+# Our module depends on Migrate Plus because we'll use migration configuration
+# entities. We also have a soft-dependency on Migrate Tools since without it we
+# can't actually execute our migrations. But, having it enabled isn't a
+# requirement so we don't necessarily need to list it here.
+dependencies:
+  - migrate_plus:migrate_plus
+
