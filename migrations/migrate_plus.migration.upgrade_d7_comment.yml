@@ -44,9 +44,10 @@ process:
       source: constants/entity_type
   comment_type:
     -
-      plugin: migration_lookup
-      source: node_type
-      migration: upgrade_d7_comment_type
+      plugin: str_replace
+      source: comment_type
+      search: 'comment_node_logentry'
+      replace: 'logentry_comments'
     -
       plugin: skip_on_empty
       method: row
