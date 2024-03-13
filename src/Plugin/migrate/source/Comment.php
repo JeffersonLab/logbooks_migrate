@@ -27,7 +27,6 @@ class Comment extends Commentd7 {
    */
   public function query() {
     $query = parent::query();
-    var_dump($this->configuration);
     $query->condition('c.cid',$this->nextCid(),'>');
     $query->condition('n.nid',$this->nextNid(),'>');
     $query->orderBy('cid','ASC');
