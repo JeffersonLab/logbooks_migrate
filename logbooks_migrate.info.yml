@@ -8,5 +8,6 @@ package: Elog
 # can't actually execute our migrations. But, having it enabled isn't a
 # requirement so we don't necessarily need to list it here.
 dependencies:
+  - custom:elog_core
   - migrate_plus:migrate_plus
 
