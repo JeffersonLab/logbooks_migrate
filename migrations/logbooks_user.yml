@@ -1,6 +1,4 @@
-id: upgrade_d7_user
-class: Drupal\user\Plugin\migrate\User
-migration_group: elog_users
+id: logbooks_user
 label: 'User accounts'
 source:
   plugin: logbooks_user
@@ -90,7 +88,7 @@ destination:
   plugin: 'entity:user'
 migration_dependencies:
   required:
-    - upgrade_d7_user_role
+    - logbooks_user_role
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_file

@@ -1,4 +1,4 @@
-id: upgrade_d7_node_complete_useful_link
+id: logbooks_useful_link
 class: Drupal\node\Plugin\migrate\D7NodeTranslation
 migration_group: migrate_drupal_7
 label: 'Node complete (Useful Link)'

@@ -1,6 +1,6 @@
-id: upgrade_d7_taxonomy_term_tags
+id: taxonomy_term_tags
 class: Drupal\migrate\Plugin\Migration
-migration_group: migrate_drupal_7
+migration_group: logbooks_taxonomy
 label: 'Taxonomy terms (Tags)'
 source:
   plugin: d7_taxonomy_term
@@ -12,9 +12,8 @@ process:
       source: tid
   vid:
     -
-      plugin: migration_lookup
-      migration: upgrade_d7_taxonomy_vocabulary
-      source: vid
+      plugin: default_value
+      default_value: 'tags'
   name:
     -
       plugin: get
@@ -59,8 +58,6 @@ destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: tags
 migration_dependencies:
-  required:
-    - upgrade_d7_taxonomy_vocabulary
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_taxonomy_vocabulary

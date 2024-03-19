@@ -1,6 +1,5 @@
-id: upgrade_d7_user_role
+id: logbooks_user_role
 class: Drupal\migrate\Plugin\Migration
-migration_group: migrate_drupal_7
 label: 'User roles'
 source:
   plugin: d7_user_role

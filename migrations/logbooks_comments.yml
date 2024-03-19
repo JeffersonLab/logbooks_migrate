@@ -3,9 +3,8 @@ migration_group: migrate_drupal_7
 label: Comments
 source:
   plugin: logbooks_comment
-  first_cid: 48688
   batch_size: 1000
-  first_nid: 1330000
+  first_nid: 1320000
   constants:
     entity_type: node
 process:
@@ -126,6 +125,5 @@ destination:
   plugin: 'entity:comment'
 migration_dependencies:
   required:
-    - complete_logentry
-#    - upgrade_d7_comment_type
+    - node_complete_logentry
 

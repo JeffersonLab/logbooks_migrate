@@ -1,6 +1,6 @@
-id: upgrade_d7_taxonomy_term_logbooks
+id: taxonomy_term_logbooks
 class: Drupal\migrate\Plugin\Migration
-migration_group: migrate_drupal_7
+migration_group: logbooks_taxonomy
 label: 'Taxonomy terms (Logbooks)'
 source:
   plugin: d7_taxonomy_term
@@ -11,10 +11,8 @@ process:
       plugin: get
       source: tid
   vid:
-    -
-      plugin: migration_lookup
-      migration: upgrade_d7_taxonomy_vocabulary
-      source: vid
+    - plugin: default_value
+      default_value: 'logbooks'
   name:
     -
       plugin: get
@@ -59,8 +57,6 @@ destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: logbooks
 migration_dependencies:
-  required:
-    - upgrade_d7_taxonomy_vocabulary
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_taxonomy_vocabulary

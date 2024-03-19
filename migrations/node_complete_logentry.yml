@@ -1,9 +1,9 @@
-id: complete_logentry
+id: node_complete_logentry
 label: 'Node complete (LogEntry)'
 source:
   plugin: logbooks_logentry
   batch_size: 1000
-  first_nid: 1330000
+  first_nid: 1331000
   node_type: logentry
 process:
   nid:
@@ -105,7 +105,7 @@ process:
       source: field_tags
       process:
         target_id: tid
-  body:
+  field_body:
     -
       plugin: get
       source: body
@@ -135,8 +135,7 @@ destination:
   default_bundle: logentry
 migration_dependencies:
   required:
-    - upgrade_d7_user
-    - upgrade_d7_node_type
+    - logbooks_user
   optional:
     - upgrade_d7_field_instance
     - upgrade_d7_comment_field_instance
