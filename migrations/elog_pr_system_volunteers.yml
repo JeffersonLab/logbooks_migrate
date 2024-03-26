@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies: {  }
+id: elog_pr_system_volunteers
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: ELOG_PR
+label: 'Elog PR System Volunteers'
+source:
+  plugin: elog_pr_system_volunteers
+process:
+    system_id : system_id
+    system_name_cached : system_name_cached
+    uid : uid
+destination:
+  plugin: table
+  table_name: elog_pr_system_volunteers
+  id_fields:
+    system_id:
+      type: integer
+    uid:
+      type: integer
+  fields:
+    system_id: system_id
+    system_name_cached: system_name_cached
+    uid: uid
+migration_dependencies: {  }
