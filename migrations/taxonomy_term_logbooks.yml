@@ -1,5 +1,4 @@
 id: taxonomy_term_logbooks
-class: Drupal\migrate\Plugin\Migration
 migration_group: logbooks_taxonomy
 label: 'Taxonomy terms (Logbooks)'
 source:
@@ -29,6 +28,7 @@ process:
     -
       plugin: get
       source: weight
+
   parent_id:
     -
       plugin: skip_on_empty
@@ -36,19 +36,12 @@ process:
       source: parent
     -
       plugin: migration_lookup
-      migration:
-        - upgrade_d7_taxonomy_term_tags
-        - upgrade_d7_taxonomy_term_logbooks
-        - upgrade_d7_taxonomy_term_checklists
+      migration: taxonomy_term_logbooks
   parent:
-    -
-      plugin: default_value
-      default_value: 0
-      source: '@parent_id'
-  changed:
-    -
-      plugin: get
-      source: timestamp
+    plugin: default_value
+    default_value: 0
+    source: '@parent_id'
+  changed: timestamp
   langcode:
     -
       plugin: get
