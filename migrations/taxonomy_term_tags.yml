@@ -1,5 +1,4 @@
 id: taxonomy_term_tags
-class: Drupal\migrate\Plugin\Migration
 migration_group: logbooks_taxonomy
 label: 'Taxonomy terms (Tags)'
 source:
@@ -37,19 +36,12 @@ process:
       source: parent
     -
       plugin: migration_lookup
-      migration:
-        - upgrade_d7_taxonomy_term_tags
-        - upgrade_d7_taxonomy_term_logbooks
-        - upgrade_d7_taxonomy_term_checklists
+      migration: taxonomy_term_tags
   parent:
-    -
       plugin: default_value
       default_value: 0
       source: '@parent_id'
-  changed:
-    -
-      plugin: get
-      source: timestamp
+  changed: timestamp
   langcode:
     -
       plugin: get
