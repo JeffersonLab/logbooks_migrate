@@ -24,7 +24,7 @@ process:
     -
       plugin: migration_lookup
       migration:
-        - complete_logentry
+        - node_complete_logentry
       source: nid
     -
       plugin: node_complete_node_lookup
