@@ -4,7 +4,7 @@ namespace Drupal\logbooks_migrate\Plugin\migrate\source;
 
 use Drupal\migrate\Row;
 use Drupal\migrate_drupal\Plugin\migrate\source\DrupalSqlBase;
-use Drupal\node\Plugin\migrate\source\d7\Node;
+use Drupal\node\Plugin\migrate\source\d7\NodeComplete;
 
 /**
  * Source plugin for baseball players.
@@ -13,7 +13,7 @@ use Drupal\node\Plugin\migrate\source\d7\Node;
  *   id = "logbooks_logentry"
  * )
  */
-class Logentry extends Node {
+class Logentry extends NodeComplete{
 
   public function fields() {
     return parent::fields();
@@ -34,7 +34,7 @@ class Logentry extends Node {
     $query->condition('n.nid',$this->nextNid(),'>');
     $query->orderBy('nid','ASC');
 
-    //var_dump($query->__toString());
+//    var_dump($query->__toString());
 
     return $query;
 

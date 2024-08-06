@@ -3,7 +3,7 @@ label: 'Node complete (LogEntry)'
 source:
   plugin: logbooks_logentry
   batch_size: 1000
-  first_nid: 1331000
+  first_nid: 1330000
   node_type: logentry
 process:
   nid:
@@ -63,10 +63,6 @@ process:
     -
       plugin: get
       source: source_langcode
-  comment_node_logentry/0/status:
-    -
-      plugin: get
-      source: comment
   field_attach:
     -
       plugin: sub_process
@@ -138,4 +134,3 @@ migration_dependencies:
     - logbooks_user
   optional:
     - upgrade_d7_field_instance
-    - upgrade_d7_comment_field_instance
