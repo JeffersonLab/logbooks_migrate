@@ -16,7 +16,7 @@ class File extends D7File{
 
   public function query() {
     $query = parent::query();
-    $query->condition('f.fid',2167300,'>');
+    $query->condition('f.fid',2502000,'>');
     return $query;
   }
 }
