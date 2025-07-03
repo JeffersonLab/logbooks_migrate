@@ -11,7 +11,10 @@ source:
   plugin: logbooks_files
   scheme: public
   constants:
-    source_base_path: /var/www/html/web/sites/default/files/d7
+    # Note that beneath source_base_path there should be symlink named files
+    # that points to old files/public.
+    #  source_base_path: /var/www/html/web/sites/default/files/d7
+    source_base_path: /var/www/d7
 process:
   fid:
     -

@@ -3,7 +3,7 @@ label: 'Node complete (LogEntry)'
 source:
   plugin: logbooks_logentry
   batch_size: 1000
-  first_nid: 1330000
+  first_nid: 1483000
   node_type: logentry
 process:
   nid:
